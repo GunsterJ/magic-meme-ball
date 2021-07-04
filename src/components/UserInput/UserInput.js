@@ -1,10 +1,11 @@
-import { Button, InputAdornment, TextField } from '@material-ui/core';
+import { Button, InputAdornment, TextField } from '@material-ui/core'
 
+import { Container } from './userInput-styles'
 import React from 'react'
 
 const UserInput = () => {
    return (
-      <>
+      <Container>
          <TextField 
             variant='outlined' 
             fullWidth
@@ -14,7 +15,7 @@ const UserInput = () => {
             }}
          />
          <Button variant='contained'>Get the answer</Button>
-      </>
+      </Container>
    )
 }
 
