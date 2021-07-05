@@ -10,5 +10,6 @@ export const Default = (args) => <UserInput {...args} />
 
 Default.args = {
    label: 'This is for testing purposes',
-   adornment: 'The question comes after this part,'
+   adornment: 'The question comes after this part,',
+   button: 'Push the button'
 }
