@@ -5,8 +5,8 @@ export const MemeContext = React.createContext({
 })
 
 export const MemeContextProvider = ({ children }) => {
-   const [imageSrc, setimageSrc] = useState('eightball')
+   const [imageSrc, setImageSrc] = useState('eightball')
    return (
-      <MemeContext.Provider value={[imageSrc, setimageSrc]}>{children}</MemeContext.Provider>
+      <MemeContext.Provider value={[imageSrc, setImageSrc]}>{children}</MemeContext.Provider>
    )
 }
