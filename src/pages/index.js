@@ -6,7 +6,10 @@ import UserInput from '../components/UserInput/UserInput.js'
 const IndexPage = () => (
   <Layout>
     <SEO title='Magic Meme Ball'/>
-    <UserInput/>
+    <UserInput
+      label='Ask the magic meme ball a polar question'
+      adornment='Oh, magic meme ball'
+    />
   </Layout>
 )
 

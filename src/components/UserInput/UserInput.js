@@ -3,15 +3,15 @@ import { Button, InputAdornment, TextField } from '@material-ui/core'
 import { Container } from './userInput-styles'
 import React from 'react'
 
-const UserInput = () => {
+const UserInput = (props) => {
    return (
       <Container>
          <TextField 
             variant='outlined' 
             fullWidth
-            label='Ask the magic meme ball a polar question' 
+            label= { props.label }
             InputProps={{
-               startAdornment: <InputAdornment position="start">Oh, magic meme ball</InputAdornment>,
+               startAdornment: <InputAdornment position="start">{ props.adornment }</InputAdornment>,
             }}
          />
          <Button variant='contained'>Get the answer</Button>
