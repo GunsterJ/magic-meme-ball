@@ -1,11 +1,16 @@
-import React from 'react'
+import React, { useContext } from 'react'
+
+import { MemeContext } from '../../context/context'
 import { Wrapper } from './meme-styles'
 import eightballGIF from '../../gifs/eightball.gif'
 
 const Meme = () => {
+
+   const [imageSrc] = useContext(MemeContext)
+
    return (
       <Wrapper>
-         <img src={eightballGIF} alt="Otter dancing with a fish" />
+         {imageSrc === 'eightball' && <img src={eightballGIF}/>}
       </Wrapper>
    )
 }

@@ -1,7 +1,6 @@
-/**
- * Implement Gatsby's Browser APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/browser-apis/
- */
+import { MemeContextProvider } from './src/context/context'
+import React from 'react'
 
-// You can delete this file if you're not using it
+export const wrapRootElement = ({ element }) => (
+  <MemeContextProvider>{ element }</MemeContextProvider>
+)
