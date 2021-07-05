@@ -14,7 +14,7 @@ const UserInput = (props) => {
                startAdornment: <InputAdornment position="start">{ props.adornment }</InputAdornment>,
             }}
          />
-         <Button variant='contained'>Get the answer</Button>
+         <Button variant='contained'>{ props.button }</Button>
       </Container>
    )
 }

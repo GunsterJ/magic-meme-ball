@@ -9,6 +9,7 @@ const IndexPage = () => (
     <UserInput
       label='Ask the magic meme ball a polar question'
       adornment='Oh, magic meme ball'
+      button='shake the ball'
     />
   </Layout>
 )
