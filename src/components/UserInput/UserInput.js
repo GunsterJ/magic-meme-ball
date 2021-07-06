@@ -24,12 +24,23 @@ const UserInput = (props) => {
             variant='outlined' 
             fullWidth
             label= { props.label }
+            value={value}
             onChange={e => setValue(e.target.value)}
             InputProps={{
                startAdornment: <InputAdornment position="start">{ props.adornment }</InputAdornment>,
             }}
          />
-         <Button variant='contained' onClick={() => setImageSrc(meme)} disabled={ value.length > 0 ? false : true }>{ props.button }</Button>
+         <Button 
+            variant='contained' 
+            onClick={() => {
+               setImageSrc(meme)
+               setValue('')
+            }}
+            disabled={ value.length > 0 ? false : true }>
+
+            { props.button }
+            
+         </Button>
       </Container>
    )
 }
