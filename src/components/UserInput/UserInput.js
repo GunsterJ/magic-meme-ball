@@ -25,7 +25,10 @@ const UserInput = (props) => {
             fullWidth
             label= { props.label }
             value={value}
-            onChange={e => setValue(e.target.value)}
+            onChange={e => {
+               setValue(e.target.value)
+               setImageSrc('eightball')
+            }}
             InputProps={{
                startAdornment: <InputAdornment position="start">{ props.adornment }</InputAdornment>,
             }}
