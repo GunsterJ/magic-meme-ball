@@ -7,7 +7,7 @@ import { MemeContext } from '../../context/context'
 const UserInput = (props) => {
    
    const [imageSrc, setImageSrc] = useContext(MemeContext)
-
+   const [value, setValue] = useState('')
    const [meme, setMeme] = useState()
 
    useEffect(() => {
@@ -24,11 +24,12 @@ const UserInput = (props) => {
             variant='outlined' 
             fullWidth
             label= { props.label }
+            onChange={e => setValue(e.target.value)}
             InputProps={{
                startAdornment: <InputAdornment position="start">{ props.adornment }</InputAdornment>,
             }}
          />
-         <Button variant='contained' onClick={() => setImageSrc(meme)}>{ props.button }</Button>
+         <Button variant='contained' onClick={() => setImageSrc(meme)} disabled={ value.length > 0 ? false : true }>{ props.button }</Button>
       </Container>
    )
 }
