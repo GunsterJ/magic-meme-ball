@@ -6,11 +6,11 @@ import eightballGIF from '../../gifs/eightball.gif'
 
 const Meme = () => {
 
-   const [imageSrc, setImageSrc] = useContext(MemeContext)
+   const [ imageSrc ] = useContext(MemeContext)
 
    return (
       <Wrapper>
-         {imageSrc === 'eightball' ? <img src={eightballGIF}/> : <img src={imageSrc}/> }
+         { imageSrc === 'eightball' || imageSrc === undefined ? <img src={ eightballGIF }/> : <img src={ imageSrc }/> }
       </Wrapper>
    )
 }
