@@ -35,6 +35,7 @@ const UserInput = (props) => {
          />
          <Button 
             variant='contained' 
+            color='primary'
             onClick={() => {
                setImageSrc(meme)
                setValue('')
