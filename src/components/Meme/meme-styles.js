@@ -5,7 +5,9 @@ const Wrapper = styled.div`
 
    display: grid;
    place-content: center;
-   min-height: 400px;
+   > img {
+      height: 250px;
+   }
 
    @media ${device.desktop} { 
       padding: var(--spacing-large) 0;
@@ -21,6 +23,9 @@ const Wrapper = styled.div`
 
    @media ${device.mobile} { 
       padding: var(--spacing-large) 0;
+      > img {
+         max-width: 95vw;
+      }
    }
 
 `
