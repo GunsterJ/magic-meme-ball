@@ -5,6 +5,7 @@ const Wrapper = styled.div`
 
    display: grid;
    place-content: center;
+   min-height: 400px;
 
    @media ${device.desktop} { 
       padding: var(--spacing-large) 0;
